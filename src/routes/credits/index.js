@@ -5,6 +5,27 @@ export default class Credits extends Component {
 		return (
 			<div>
 				<h1>Credits</h1>
+				<h2>Content</h2>
+				<div>
+					<p>
+						{' '}
+						Content for the site was pulled from{' '}
+						<a href="http://gameranx.com/">Gameranx</a>
+					</p>
+					<ul>
+						<li>
+							<a href="http://gameranx.com/features/id/126105/article/call-of-duty-ww2-zombies-how-to-upgrade-the-tesla-gun-all-variants-guide/">
+								Telsa Gun Guide
+							</a>
+						</li>
+						<li>
+							<a href="http://gameranx.com/features/id/126132/article/call-of-duty-ww2-zombies-true-easter-egg-guide-hardcore-walkthrough/">
+								Main Quest Guid
+							</a>
+						</li>
+					</ul>
+				</div>
+				<h2>Icon</h2>
 				Zombie Icons made by{' '}
 				<a href="http://www.freepik.com" title="Freepik">
 					Freepik
