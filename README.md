@@ -1,10 +1,12 @@
-# preact material app
+# Zed Führen
+
+COD WW2 Zombies Guide
 
 Super performant `Material` app for preact world using [preact-material-components](https://github.com/prateekbh/preact-material-components)
 
 ## CLI Commands
 
-``` bash
+```bash
 # install dependencies
 npm install
 
