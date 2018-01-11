@@ -5,20 +5,22 @@ import LayoutGrid from 'preact-material-components/LayoutGrid';
 
 import BadQuest from './BadQuest';
 import GoodQuest from './GoodQuest';
-import './style.css';
+import style from './style.css';
 
 export default class Main extends Component {
 	render() {
 		return (
-			<LayoutGrid cols="2">
-				<LayoutGrid.Inner>
-					<LayoutGrid.Cell>
-						<GoodQuest />
-						<BadQuest />
-					</LayoutGrid.Cell>
-					<LayoutGrid.Cell cols="6" />
-				</LayoutGrid.Inner>
-			</LayoutGrid>
+			<div class={style.main}>
+				<LayoutGrid cols="2">
+					<LayoutGrid.Inner>
+						<LayoutGrid.Cell>
+							<GoodQuest />
+							<BadQuest />
+						</LayoutGrid.Cell>
+						<LayoutGrid.Cell cols="6" />
+					</LayoutGrid.Inner>
+				</LayoutGrid>
+			</div>
 		);
 	}
 }
