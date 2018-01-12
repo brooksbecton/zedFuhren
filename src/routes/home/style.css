@@ -1,5 +1,99 @@
 .home {
-	padding: 20px;
-	min-height: 100%;
-	width: 100%;
+    padding: 20px;
+    min-height: 100%;
+    width: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    align-content: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    justify-content: space-around;
+    height: 10vw;
+    margin: 1vw;
+    min-height: 40%;
+    min-width: 40%;
+    width: calc(50%) - 1vw;
+}
+
+@media only screen and (max-width: 480px) {
+    .square {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .square {
+        height: 10vw;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .square {
+        height: 20vw;
+        width: calc(50%) - 1vw;
+    }
+}
+
+.square i {
+    font-size: 1.5em;
+}
+
+.square:nth-child(1) {
+    background-color: #f44336;
+}
+
+.square:nth-child(2) {
+    background-color: #bdbdbd;
+}
+
+.square:nth-child(3) {
+    background-color: #212121;
+    color: #fff;
+}
+
+.square:nth-child(4) {
+    background-color: #757575;
+    color: #fff;
+}
+
+.squareHelper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.squareContainer {
+    display: flex;
+    height: 30vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+
+.twitterContainer {
+    width: 30%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mainContainer {
+        display: block;
+    }
+    .squareContainer {
+        height: initial;
+        width: 100%;
+    }
+    .twitterContainer {
+        width: 100%;
+    }
 }
