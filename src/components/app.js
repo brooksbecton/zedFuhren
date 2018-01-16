@@ -334,9 +334,7 @@ export default class App extends Component {
 	toggleStep = stepId => {
 		let steps = { ...this.state.steps };
 		steps[stepId].finished = !this.state.steps[stepId].finished;
-		console.log(!this.state.steps[stepId].finished);
 		this.setState({ steps });
-		console.log(this.state.steps[stepId]);
 		this.saveState();
 	};
 
