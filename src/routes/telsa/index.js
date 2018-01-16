@@ -8,6 +8,10 @@ export default class Telsa extends Component {
 		super();
 	}
 
+	completeStep = stepId => {
+		this.props.saveStep(stepId);
+	};
+
 	render() {
 		return (
 			<div class="telsa">
@@ -17,7 +21,9 @@ export default class Telsa extends Component {
 						<h2 id={gunName}>{capitalizeFirstLetter(gunName)}</h2>
 						<ol>
 							{this.props.telsa[gunName].map(stepId => (
-								<li>{this.props.steps[stepId].body}</li>
+								<li onClick={() => this.completeStep(stepId)}>
+									{this.props.steps[stepId].body}
+								</li>
 							))}
 						</ol>
 					</div>

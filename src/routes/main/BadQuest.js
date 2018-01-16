@@ -24,8 +24,13 @@ export default class BadQuest extends Component {
 							<Switch /> Power
 						</li>
 						<li>
+							<Switch /> Escort and Charge both sides
+						</li>
+				
+						<li>
 							<Switch /> Charge Salt Mine
 						</li>
+				
 						<li>
 							<Switch /> Power Run
 						</li>
