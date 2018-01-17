@@ -1,11 +1,14 @@
 import { h, Component } from "preact";
 import Switch from "preact-material-components/Switch";
 import "preact-material-components/Switch/style.css";
+import Button from "preact-material-components/Button";
+import "preact-material-components/Button/style.css";
 
 import BottomNav from "./BottomNav";
 import capitalizeFirstLetter from "./../../lib/capitalizeFirstLetter";
 
 import style from "./style";
+import clearStepsProgress from "./../../lib/clearStepsProgress";
 
 export default class Telsa extends Component {
   constructor() {
@@ -29,8 +32,12 @@ export default class Telsa extends Component {
         <p>
           <em>Click task to complete</em>
         </p>
-        <span>Show Completed Tasks</span>
-        <Switch onClick={() => this.handleShowFinishedTasks()} />
+        <div>
+          <span>Show Completed Tasks</span>
+          <Switch onClick={() => this.handleShowFinishedTasks()} />
+        </div>
+
+        <Button stroked onClick={() => clearStepsProgress()}>Reset Progress</Button>
         {Object.keys(this.props.telsa).map(gunName => (
           <div>
             <h2 id={gunName}>{capitalizeFirstLetter(gunName)}</h2>
