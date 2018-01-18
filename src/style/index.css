@@ -42,6 +42,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     box-sizing: border-box;
     --mdc-theme-primary: #d32f2f;
+    --mdc-theme-primary-hover: #8F1E1E;
     --mdc-theme-secondary: #757575;
     --mdc-theme-background: #fff;
 }

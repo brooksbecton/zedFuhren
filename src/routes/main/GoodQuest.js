@@ -1,37 +1,27 @@
-import { h, Component } from 'preact';
-import Card from 'preact-material-components/Card';
-import 'preact-material-components/Card/style.css';
-import Switch from 'preact-material-components/Switch';
-import 'preact-material-components/Switch/style.css';
+import { h, Component } from "preact";
+import Card from "preact-material-components/Card";
+import "preact-material-components/Card/style.css";
+import Switch from "preact-material-components/Switch";
+import "preact-material-components/Switch/style.css";
 
 export default class GoodQuest extends Component {
-	render() {
-		return (
-			<Card>
-				<Card.Primary>
-					<Card.Title>Hard Quest</Card.Title>
-					<Card.Subtitle>Good Ending</Card.Subtitle>
-				</Card.Primary>
-				<Card.SupportingText>
-					<ol>
-						<li>
-							<Switch /> Pub Power
-							<ul>
-								<li>
-									<Switch /> Spin the Chicken
-								</li>
-								<li>
-									<Switch /> Shoot the light
-								</li>
-							</ul>
-						</li>
-						<li>
-							<Switch /> Tops
-						</li>
-						<li>
-							<Switch /> Enigma Puzzles
-						</li>
-						<li>
+  render() {
+    return (
+      <Card>
+        <Card.Primary>
+          <Card.Title>Hard Quest</Card.Title>
+          <Card.Subtitle>Good Ending</Card.Subtitle>
+        </Card.Primary>
+        <Card.SupportingText>
+          <ul>
+            <li>Restore Power to the Pub</li>
+            <li>Find all three tops and place them by toy store</li>
+            <li>
+              Find the Enigma puzzles in the windows of the town. Align matching
+              top to number.
+            </li>
+            <li>Reset Bunker Power.</li>
+            {/* <li>
 							<Switch /> Reset Bunker Power
 							<ol>
 								<li>
@@ -53,32 +43,16 @@ export default class GoodQuest extends Component {
 									<Switch /> Get <em>Red Talon</em>
 								</li>
 							</ol>
-						</li>
-						<li>
-							<Switch /> Charge Red Talon
-							<ol>
-								<li>
-									<Switch /> Go to Pub
-								</li>
-								<li>
-									<Switch /> Kill 30-50 zombies before the song on the record
-									player finishes playing.
-								</li>
-							</ol>
-							* <em>Best to do this on a pest round</em>
-						</li>
-						<li>
-							<Switch /> Listen for record clicks
-						</li>
-						<li>
-							<Switch /> Input Second voice of God
-						</li>
-					</ol>
-				</Card.SupportingText>
-				{/* <Card.Actions>
+						</li> */}
+            <li>Charge Red Talon</li>
+
+            <li>Input Second voice of God</li>
+          </ul>
+        </Card.SupportingText>
+        {/* <Card.Actions>
 <Card.Action>OKAY</Card.Action>
 </Card.Actions> */}
-			</Card>
-		);
-	}
+      </Card>
+    );
+  }
 }

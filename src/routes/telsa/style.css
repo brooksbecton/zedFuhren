@@ -1,38 +1,53 @@
 :target:before {
-    content: "";
-    display: block;
-    height: 80px;
-    /* fixed header height*/
-    margin: -80px 0 0;
-    /* negative fixed header height */
+  content: "";
+  display: block;
+  height: 80px;
+  /* fixed header height*/
+  margin: -80px 0 0;
+  /* negative fixed header height */
 }
 
 .bottomNav {
-    background-color: var(--mdc-theme-primary);
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
+  background-color: var(--mdc-theme-primary);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .bottomNav ul {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 53px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.bottomNav li {
-    display: inline;
+.bottomNav a {
+  --linkHeight: 53px;
+  color: #fff;
+  display: inline-block;
+  height: var(--linkHeight);
+  line-height: var(--linkHeight);
+  text-align: center;
+  text-decoration: none;
+  width: 25%;
+}
+.bottomNav a:hover {
+  background-color: var(--mdc-theme-primary-hover);
+  cursor: pointer;
 }
 
-.bottomNav li a {
-    color: #fff;
-    text-decoration: none;
+.bottomNav a li {
+    list-style-type: none; 
+    margin: 0px; 
+    padding: 0px; 
 }
 
-.finished{
-    color:#006100;
+.finished {
+  color: #006100;
 }
