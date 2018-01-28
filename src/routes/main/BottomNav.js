@@ -1,4 +1,5 @@
 import { h, Component } from "preact";
+import { route } from "preact-router";
 
 import capitalizeFirstLetter from "./../../lib/capitalizeFirstLetter";
 import bottomNavStyle from "./../telsa/style";
@@ -9,10 +10,10 @@ export default class BottomNav extends Component {
     return (
       <nav class={bottomNavStyle.bottomNav}>
         <ul class={style.bottomNav}>
-          <a href="#">
+          <a onClick={() => route("/main/good")}>
             <li>Good</li>
           </a>
-          <a href="#">
+          <a onClick={() => route("/main/bad")}>
             <li>Bad</li>
           </a>
         </ul>
