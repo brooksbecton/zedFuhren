@@ -16,6 +16,71 @@ export default class App extends Component {
   constructor() {
     super();
 
+    const badQuest = {
+      1: {
+        body: "Find the three valves in town and activate fire trap",
+        blockers: [],
+        finished: false
+      },
+      2: {
+        body: "Activate the power to the bunker",
+        blockers: [],
+        finished: false
+      },
+      3: {
+        body: "Charge the hilt in the salt mine",
+        blockers: [],
+        finished: false
+      },
+      4: {
+        body: "Open metal hood to allow hilt to rise",
+        blockers: [],
+        finished: false
+      },
+      5: {
+        body:
+          "Start the powering up the hilt by hitting hitting the button by the telsa gun",
+        blockers: [],
+        finished: false
+      },
+      6: {
+        body:
+          "Kill zombies in the hilt's circle and assemble telsa gun parts on the lab and morgue side",
+        blockers: [],
+        finished: false
+      },
+      7: {
+        body: "Kill the flamethrower in the command room",
+        blockers: [],
+        finished: false
+      },
+      8: { body: "Assemble the telsa gun", blockers: [], finished: false },
+      9: { body: "Route power to the tower", blockers: [], finished: false },
+      10: { body: "Defend the tower", blockers: [], finished: false },
+      11: {
+        body: "Activate the right hand of god",
+        blockers: [],
+        finished: false
+      },
+      12: {
+        body: "Shoot down batteries from blimp and kill zombies in the circle",
+        blockers: [],
+        finished: false
+      },
+      13: {
+        body:
+          "Once charged, carry them to the right hand of god. 3 batteries are required",
+        blockers: [],
+        finished: false
+      },
+      14: {
+        body:
+          "Use the flamethrower's head on paintings around the map to get number's for the voice of god in the salt mine",
+        blockers: [],
+        finished: false
+      }
+    };
+
     const telsaMidnight = {
       //Midnight
       3480294440: {
@@ -247,8 +312,8 @@ export default class App extends Component {
     };
 
     this.state = {
-      good: [],
-      bad: [],
+      goodQuest: [],
+      badQuest: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       telsa: {
         midnight: [
           "3480294440",
@@ -300,7 +365,8 @@ export default class App extends Component {
         ...telsaMidnight,
         ...telsaReaper,
         ...telsaBloodthirst,
-        ...telsaHurricane
+        ...telsaHurricane,
+        ...badQuest
       }
     };
   }
@@ -366,7 +432,12 @@ export default class App extends Component {
             />
             <Main path="/main" />
             <GoodQuest path="/main/good" />
-            <BadQuest path="/main/bad" />
+            <BadQuest
+              steps={this.state.steps}
+              badQuestSteps={this.state.badQuest}
+              saveStep={stepId => this.toggleStep(stepId)}
+              path="/main/bad"
+            />
           </Router>
         </div>
       </div>

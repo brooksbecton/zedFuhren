@@ -7,7 +7,7 @@ import "preact-material-components/Button/style.css";
 import BottomNav from "./BottomNav";
 import capitalizeFirstLetter from "./../../lib/capitalizeFirstLetter";
 
-import style from "./style";
+import style from "./../../style";
 import clearStepsProgress from "./../../lib/clearStepsProgress";
 
 export default class Telsa extends Component {
@@ -37,7 +37,9 @@ export default class Telsa extends Component {
           <Switch onClick={() => this.handleShowFinishedTasks()} />
         </div>
 
-        <Button stroked onClick={() => clearStepsProgress()}>Reset Progress</Button>
+        <Button stroked onClick={() => clearStepsProgress()}>
+          Reset Progress
+        </Button>
         {Object.keys(this.props.telsa).map(gunName => (
           <div>
             <h2 id={gunName}>{capitalizeFirstLetter(gunName)}</h2>
